@@ -1,0 +1,18 @@
+<html>
+<head>
+    <link href="index.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <ol>
+        <todo-course
+                v-bind:key="course.id"
+                v-bind:todo="course"
+                v-for="course in courseList"
+        ></todo-course>
+    </ol>
+</div>
+<script src="index.js"></script>
+</body>
+</html>  
