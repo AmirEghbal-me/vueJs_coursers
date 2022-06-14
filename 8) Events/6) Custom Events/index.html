@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Vue.js Event Handling</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id = "eg_2">
+    <div id = "custom-event-example">
+        <p style = "font-size:25px;">Language displayed : <b>{{ languageclicked }}</b></p>
+        <button-counter
+                v-for = "(item, index) in languages"
+                v-bind:item = "item"
+                v-bind:index = "index"
+                v-on:showlanguage = "languagedisp">
+        </button-counter>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>  
