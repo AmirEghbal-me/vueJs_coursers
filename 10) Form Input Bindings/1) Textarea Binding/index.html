@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Vue.js Data Binding</title>
+    <link rel="stylesheet" href="../../index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id = "databinding">
+    <h3>Textbox</h3>
+    <input  v-model = "name" placeholder = "Enter your name.." />
+    <h3>Your name is: {{name}}</h3>
+    <hr/>
+    <h3>Textarea</h3>
+    <textarea v-model = "textmessage" placeholder = "Add Details"></textarea>
+    <h1><p>{{textmessage}}</p></h1>
+    <hr/>
+    <h3>Checkbox</h3>
+    <input type = "checkbox" id = "checkbox" v-model = "checked"> {{checked}}
+</div>
+<script src="index.js"></script>
+</body>
+</html>

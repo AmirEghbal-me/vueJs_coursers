@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Vue.js Data Binding</title>
+    <link rel="stylesheet" href="../../index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id = "databinding">
+    <h3>{{title}}</h3>
+    <a href = "hreflink" target = "_blank"> Click Here </a> <br/>
+    <a href = "{{hreflink}}" target = "_blank">Click Here </a>  <br/>
+    <a v-bind:href = "hreflink" target = "_blank">Click Here </a>   <br/>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

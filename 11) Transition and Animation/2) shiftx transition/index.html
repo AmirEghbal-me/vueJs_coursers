@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Vue.js Transition</title>
+    <link rel="stylesheet" href="../../index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<style>
+    .shiftx-enter-active, .shiftx-leave-active {
+        transition: all 2s ease-in-out;
+    }
+    .shiftx-enter, .shiftx-leave-to /* .fade-leave-active below version 2.1.8 */ {
+        transform :  translateX(100px);
+    }
+</style>
+<div id = "databinding">
+    <p> Click at the below button to see transition effect.</p>
+    <button v-on:click = "show = !show">Click Here</button>
+    <transition name = "shiftx">
+        <p v-show = "show">
+            <img src = "1.jpg" style = "width:100px;height:100px;" />
+        </p>
+    </transition>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

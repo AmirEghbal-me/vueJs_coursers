@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Vue.js Transition</title>
+    <link rel="stylesheet" href="../../index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<style>
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity 3s
+    }
+    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+        opacity: 0
+    }
+</style>
+<div id = "databinding">
+    <p> Click at the below button to see transition effect.</p>
+    <button v-on:click = "show = !show">Click Here</button>
+    <transition name = "fade">
+        <p v-show = "show" v-bind:style = "styleobj">This is a Fade Transition Example</p>
+    </transition>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

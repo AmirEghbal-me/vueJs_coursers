@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Vue.js Data Binding</title>
+    <link rel="stylesheet" href="../../index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id = "databinding">
+    <h3>Radio</h3>
+    <input type = "radio" id = "yes" value = "Yes" v-model = "picked"> Yes
+    <input type = "radio" id = "no" value = "No" v-model = "picked"> No
+    <h3>Radio element clicked: {{picked}} </h3>
+    <hr/>
+    <h3>Select</h3>
+    <select v-model = "languages">
+        <option disabled value = "">Please select one</option>
+        <option>Java</option>
+        <option>PHP</option>
+        <option>C</option>
+        <option>C++</option>
+        <option>JavaScript</option>
+    </select>
+    <h3>Your selected language is: {{ languages }}</h3>
+    <hr/>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

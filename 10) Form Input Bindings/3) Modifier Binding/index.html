@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Vue.js Data Binding</title>
+    <link rel="stylesheet" href="../../index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id = "databinding">
+    <h3> The .number modifier example</h3>
+    <span style = "font-size:20px;">Enter Age:</span> <input v-model.number = "age" type = "number">
+    <br/>
+    <br/>
+    <hr/>
+    <h3> The .lazy modifier example</h3>
+    <span style = "font-size:20px;">Enter Message:</span> <input v-model.lazy = "msg">
+    <h4>Display Message : {{msg}}</h4>
+    <br/>
+    <hr/>
+    <h3> The .trim modifier example</h3>
+    <span style = "font-size:20px;">Enter Message : </span><input v-model.trim = "message">
+    <h4>Display Message : {{message}}</h4>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
