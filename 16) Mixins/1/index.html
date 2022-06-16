@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Vue.js </title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id = "mixin_1"></div>
+<script type = "text/javascript">
+    var vm = new Vue({
+        el: '#mixin_1',
+        data: {
+        },
+        methods : {
+        },
+    });
+    var myMixin = {
+        created: function () {
+            this.startmixin()
+        },
+        methods: {
+            startmixin: function () {
+                alert("This is a Vue.js Mixin example!!");
+            }
+        }
+    };
+</script>
+<script src="index.js"></script>
+</body>
+</html>  
