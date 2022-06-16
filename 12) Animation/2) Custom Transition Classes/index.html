@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Vue.js Animation</title>
+    <link href = "https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel = "stylesheet" type = "text/css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type = "text/javascript" src = "js/vue.js"></script>
+</head>
+<body>
+<div id = "animation" style = "text-align:center">
+    <button @click = "show = !show"><span style = "font-size:25px;">Click Here</span></button>
+    <transition
+            name = "custom-classes-transition"
+            enter-active-class = "animated swing"
+            leave-active-class = "animated bounceIn">
+        <p v-if = "show"><span style = "font-size:25px;">See the animation effect</span></p>
+    </transition>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

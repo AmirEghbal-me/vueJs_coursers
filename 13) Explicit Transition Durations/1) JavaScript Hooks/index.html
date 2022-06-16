@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Vue.js Animation</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+</head>
+<body>
+<div id = "trans">
+    <button @click = "show = !show">
+        <span style = "font-size:25px;">Toggle</span>
+    </button>
+    <transition  v-on:before-enter = "beforeEnter"
+                 v-on:enter = "enter"
+                 v-on:leave = "leave"
+                 v-bind:css = "false">
+        <p v-if = "show" style = "font-size:25px;">This is an animation Example with velocity</p>
+    </transition>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

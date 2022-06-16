@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Vue.js Custom Directive</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id = "directive">
+    <div v-changestyle>Vue.js Custom Directive Example</div>
+</div>
+<script type = "text/javascript">
+    Vue.directive("changestyle",{
+        bind(e1,binding, vnode) {
+            console.log(e1);
+            e1.style.color = "red";
+            e1.style.fontSize = "20px";
+        }
+    });
+    var vm = new Vue({
+        el: '#directive',
+        data: {
+        },
+        methods : {
+        },
+    });
+</script>
+<script src="index.js"></script>
+</body>
+</html>  

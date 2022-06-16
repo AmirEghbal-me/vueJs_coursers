@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Vue.js Animation</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<style>
+    .shiftx-enter-active {
+        animation: shift-in 2s;
+    }
+    .shiftx-leave-active {
+        animation: shift-in 2s reverse;
+    }
+    @keyframes shift-in {
+        0%   {transform:rotateX(0deg);}
+        25%  {transform:rotateX(90deg);}
+        50%  {transform:rotateX(120deg);}
+        75%  {transform:rotateX(180deg);}
+        100% {transform:rotateX(360deg);}
+    }
+</style>
+<div id = "databinding">
+    <p> Click at the below button to see the animation effect.</p>
+    <button v-on:click = "show = !show">Click Here</button>
+    <transition name = "shiftx">
+        <p v-show = "show">
+            <img src = "1.jpg" style = "width:100px;height:100px;" />
+        </p>
+    </transition>
+</div>
+</script>
+<script src="index.js"></script>
+</body>
+</html>

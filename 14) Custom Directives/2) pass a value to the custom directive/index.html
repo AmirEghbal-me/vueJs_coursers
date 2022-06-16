@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Vue.js Custom Directive</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id = "directive">
+    <div v-changestyle = "{color:'green'}">Passing value to custom directive example</div>
+</div>
+<script type = "text/javascript">
+    Vue.directive("changestyle",{
+        bind(e1,binding, vnode) {
+            console.log(e1);
+            console.log(binding.value.color);
+            console.log(vnode);
+            e1.style.color=binding.value.color;
+            e1.style.fontSize = "20px";
+        }
+    });
+</script>
+<script src="index.js"></script>
+</body>
+</html>  

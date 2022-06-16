@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Vue.js Animation</title>
+    <link rel="stylesheet" href="index.css">
+    <link href = "https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel = "stylesheet" type = "text/css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+</head>
+<body>
+<div id = "trans_2" style = "text-align:center">
+    <transition
+            appear
+            appear-class = "custom-appear-class"
+            appear-active-class = "animated bounceIn">
+        <h3>This is BounceIn Animation Example</h3>
+    </transition>
+    <transition
+            appear
+            appear-class = "custom-appear-class"
+            appear-active-class = "animated swing">
+        <h3>This is Swing Animation Example</h3>
+    </transition>
+    <transition
+            appear
+            appear-class = "custom-appear-class"
+            appear-active-class = "animated rubberBand">
+        <h3>This is RubberBand Animation Example</h3>
+    </transition>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
